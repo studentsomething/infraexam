@@ -1,0 +1,35 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: psharkey/heroku-cli
+    tag: "latest"
+
+inputs:
+- name: source
+
+params:
+    heroku_email:
+    heroku_api_token:
+    app_name:
+    logz_token:
+
+run:
+  path: sh
+  dir: source
+  args:
+    - -exc
+    - |
+      cat > /root/.netrc <<EOF
+      machine api.heroku.com
+          login ${heroku_email}
+          password ${heroku_api_token}
+      machine git.heroku.com
+          login ${heroku_email}
+          password ${heroku_api_token}
+      EOF
+      heroku config:set LOGZ_TOKEN=${logz_token} --app ${app_name}
+      # This one would need to be fixed somehow, to be able to get the HOST from 'heroku addons --json' but I have no clue how.
+      # heroku config:set HOSTEDGRAPHITE_HOST=$(heroku info -s | grep web-url | cut -d= -f2) --app ${app_name}
+      git push https://git.heroku.com/${app_name}.git master:refs/heads/master
