@@ -1,0 +1,3 @@
+apprepo: https://github.com/studentsomething/appexam
+infrarepo: https://github.com/studentsomething/infraexam
+kandidatnummer: 100011 (til opplysning er ikke dette nummeret identifiserbart mot meg som student (med unntak for administrasjonen))
