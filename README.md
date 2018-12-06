@@ -55,6 +55,10 @@ Da jeg ikke fikk gjort veldig mye, fokuserte jeg ikke ekstremt mye på testing a
 Var også litt usikker på om det er logisk at eventuelle logger i tester logges direkte til konsollen (med logback) eller til logz.io. Jeg valgte det første.
 Er derimot fullt klar over at hvis testloggene skal sendes til logz.io er det kun å endre logback-test.xml fila.
 
-PS: For å nå REST-API'et som selvfølgelig ikke er dokumentert med Swagger (det sto på min ToDo liste). Men det er en aldri så liten guide som hjemskjerm.
+## Mistenkelig repo
+Det ser muligens litt mistenkelig ut at jeg har commited veldig lite.. *Grunnen til dette var at jeg hadde en initial commit i mitt arbeidsrepo bundet til min email. Så på forespørsmål så gjør jeg gjerne dette repoet public så eventuelle juksemistanker blir oppklart.
 
+
+
+PS: For å nå REST-API'et som selvfølgelig ikke er dokumentert med Swagger (det sto på min ToDo liste). Men det er en aldri så liten guide som hjemskjerm.
 
