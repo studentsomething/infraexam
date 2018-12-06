@@ -3,6 +3,7 @@ jobs:
   plan:
   - aggregate:
     - get: monitoring-app
+      trigger: true
     - get: monitoring-infra
   - task: mvn_build
     file: monitoring-infra/concourse/java/task.yml
